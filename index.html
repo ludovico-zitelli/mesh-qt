@@ -3,12 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zeceajnv mesh qt</title>
+    <link rel="stylesheet" href="style.css">
 </head>
     <script>
         var url = new URL(window.location.href);
         var pid = url.searchParams.get("pid");
-        var region = url.searchParams.get('r')
-        var mode = url.searchParams.get('m')
+        var region = url.searchParams.get('region')
+        var mode = url.searchParams.get('mode')
 
         function hawkQT() {
             if(mode === "fe"){
@@ -34,12 +35,16 @@
         }
     </script>
 <body>
-    <h1>zeceajnv QTS</h1>
-    <h2>Please select your bot for redirect</h2>
-    <div class="qt-buttons">
-        <button id="QT" onclick="hawkQT()">HAWK</button>
-        <button id="QT" onclick="mbotQT()">MBOT</button>
-        <button id="QT" onclick="polarQT()">POLAR</button>
+    <div class="container">
+        <div class="text-container">
+            <h1 id="title">MESH QTs</h1>
+            <h2 id="descr">Please select your bot for redirect</h2>
+        </div>
+        <div class="buttons-container">
+            <button id="button" onclick="hawkQT()">HAWK</button>
+            <button id="button" onclick="mbotQT()">MBOT</button>
+            <button id="button" onclick="polarQT()">POLAR</button>
+        </div>
     </div>
 </body>
 </html>
