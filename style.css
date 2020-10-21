@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Roboto";
-    src: url("../../assets/fonts/roboto_regular/Roboto-Regular-webfont.woff")
+    src: url("./assets/fonts/roboto_regular/Roboto-Regular-webfont.woff")
       format("woff");
     font-weight: normal;
     font-style: normal;
@@ -8,7 +8,7 @@
   
   @font-face {
     font-family: "Roboto";
-    src: url("../../assets/fonts/roboto_bold/Roboto-Bold-webfont.woff")
+    src: url("./assets/fonts/roboto_bold/Roboto-Bold-webfont.woff")
       format("woff");
     font-weight: bold;
     font-style: bold;
@@ -49,7 +49,7 @@
     box-sizing: inherit;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
     border: none;
-    border-radius: 2px;
+    border-radius: 10px;
     height: 36px;
     line-height: 36px;
     padding: 0 16px;
@@ -67,4 +67,5 @@
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     vertical-align: middle;
+    margin: 3pt;
 }
