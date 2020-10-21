@@ -33,6 +33,11 @@
             }
             location.href = redirect;
         }
+
+        function rootalabzQT(){
+            redirect = `http://127.0.0.1:1666/quicktask?store=${region}&pid=${pid}`
+            location.href = redirect
+        }
     </script>
 <body>
     <div class="container">
@@ -44,6 +49,7 @@
             <button id="button" onclick="hawkQT()">HAWK</button>
             <button id="button" onclick="mbotQT()">MBOT</button>
             <button id="button" onclick="polarQT()">POLAR</button>
+            <button id="button" onclick="rootalabzQT()">ROOTLABZ</button>
         </div>
     </div>
 </body>
