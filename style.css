@@ -21,7 +21,7 @@ body{
     flex-direction:column; 
 }
 
-footer{
+#footer{
     font-family: Roboto;
     font-weight: normal;
     text-align: center;
