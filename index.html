@@ -20,23 +20,47 @@
             location.href = redirect;
         }
 
+        function rootalabzQT(){
+            redirect = `http://127.0.0.1:1666/quicktask?store=${region}&pid=${pid}`
+            location.href = redirect
+        }
+
         function mbotQT(){
             redirect = `https://mbot.app/${region}/variant/${pid}`
             location.href = redirect;
         }
 
         function polarQT(){
+            if(region === "footpatrolgb"){
+                region = "footpatrol"
+                if(mode === "fe"){
+                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
+                } else {
+                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
+                }
+            }
+            if(region === "sizefr"){
+                region = "size"
+                if(mode === "fe"){
+                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
+                } else {
+                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
+                }
+            }
+            if(region === "sizede"){
+                region = "size"
+                if(mode === "fe"){
+                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
+                } else {
+                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
+                }
+            }
             if(mode === "fe"){
                 redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
             } else {
                 redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
             }
             location.href = redirect;
-        }
-
-        function rootalabzQT(){
-            redirect = `http://127.0.0.1:1666/quicktask?store=${region}&pid=${pid}`
-            location.href = redirect
         }
     </script>
 <body>
@@ -47,9 +71,9 @@
         </div>
         <div class="buttons-container">
             <button id="button" onclick="hawkQT()">HAWK</button>
+            <button id="button" onclick="rootalabzQT()">ROOTLABZ</button>
             <button id="button" onclick="mbotQT()">MBOT</button>
             <button id="button" onclick="polarQT()">POLAR</button>
-            <button id="button" onclick="rootalabzQT()">ROOTLABZ</button>
         </div>
     </div>
 </body>
