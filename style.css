@@ -21,7 +21,7 @@ body{
     flex-direction:column; 
 }
 
-#footer{
+footer{
     font-family: Roboto;
     font-weight: normal;
     text-align: center;
@@ -55,6 +55,11 @@ body{
     font-size: 16pt;
     font-weight: normal;
     margin-top: -12pt;
+}
+
+#pid {
+    font-size: 16pt;
+    font-weight: normal;
 }
 
 #button {
