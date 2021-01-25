@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeceajnv sbx atc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    var url = new URL(window.location.href);
+    var pid = url.searchParams.get("pid");
+
+    function isFastPid() {
+        if (pid) {
+            document.getElementById("pid").value = pid
+            document.getElementById("atc").submit();
+        }
+    }
+
+    function atc() {
+        document.getElementById("atc").submit();
+    }
+</script>
+<body onload="isFastPid()">
+<div class="container">
+    <div class="text-container">
+        <h1 id="title">SBX atc</h1>
+        <h2 id="descr">Insert the pid to atc</h2>
+        <form id="atc" action="https://www.solebox.com/en_DE/add-product?format=ajax" method="POST">
+            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="options" value="[]">
+            <input type="text" name="pid" id="pid">
+        </form>
+    </div>
+    <div class="buttons-container">
+        <button id="button" onclick="atc()">ATC</button>
+    </div>
+</div>
+</body>
+<footer>Made with love by zeceajnv</footer>
+</html>
