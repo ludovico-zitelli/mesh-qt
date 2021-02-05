@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeceajnv OOS QT handler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function sendQT() {
+        document.qt.action = 'https://' + document.getElementById('qturl').value + '/mesh'
+        document.getElementById("qt").submit();
+    }
+</script>
+<body>
+<div class="container">
+    <div class="text-container">
+        <h1 id="title">OOS QT</h1>
+        <h2 id="descr">Select locale and insert pid</h2>
+        <form id="qt" name="qt" action="" method="GET" target="ifrm1">
+            <div style="display: flex; flex-direction: column; justify-content: space-around; margin-bottom: 20px">
+                <label>STOREID</label>
+                <select name="store" id="store">
+                    <option value="footpatrol">Footpatrol</option>
+                    <option value="size">Size</option>
+                    <option value="sizefr">Size FR</option>
+                    <option value="sizede">Size DE</option>
+                    <option value="jdsports">JDSports UK</option>
+                    <option value="jdsportsde">JDSports DE</option>
+                    <option value="jdsportsfr">JDSports FR</option>
+                    <option value="jdsportsit">JDSports IT</option>
+                    <option value="jdsportses">JDSports ES</option>
+                    <option value="jdsportsnl">JDSports NL</option>
+                </select>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: space-around; margin-bottom: 20px;">
+                <label>PID</label>
+                <input type="text" name="pid" id="pid">
+            </div>
+        </form>
+        <!--<div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label>AMOUNT</label>
+            <input type="number" name="amount" id="amount" value="1">
+        </div>-->
+        <div style="display: flex; flex-direction: column;">
+            <label>QT URL</label>
+            <input type="text" name="qturl" id="qturl" value="bd5250a0e333.ngrok.io">
+        </div>
+        </div>
+    <div class="buttons-container">
+        <button id="button" onclick="sendQT()">LAUNCH QT</button>
+    </div>
+    <iframe id="ifrm1" name="ifrm1" style="display:none"></iframe>
+</div>
+</body>
+<footer>Made with love by zeceajnv</footer>
+</html>

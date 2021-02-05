@@ -1,39 +1,36 @@
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/fonts/roboto_regular/Roboto-Regular-webfont.woff")
-      format("woff");
+    src: url("./assets/fonts/roboto_regular/Roboto-Regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "Roboto";
-    src: url("./assets/fonts/roboto_bold/Roboto-Bold-webfont.woff")
-      format("woff");
-    font-weight: bold;
-    font-style: bold;
-  }
-
-body{ 
-    height:100vh; 
-    margin:0;
-    display:flex; 
-    flex-direction:column; 
 }
 
-footer{
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/roboto_bold/Roboto-Bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: bold;
+}
+
+body {
+    height: 95vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
     font-family: Roboto;
     font-weight: normal;
     text-align: center;
     font-size: 15pt;
-    min-height: 50px;
     margin-top: auto;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     text-align: center;
     margin-top: 50pt;
 }
@@ -57,8 +54,13 @@ footer{
     margin-top: -12pt;
 }
 
-#pid {
+#pid, #store {
     font-size: 16pt;
+    font-weight: normal;
+}
+
+#qturl, #amount {
+    font-size: 14pt;
     font-weight: normal;
 }
 
@@ -68,7 +70,7 @@ footer{
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     box-sizing: inherit;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 10px;
     height: 36px;
