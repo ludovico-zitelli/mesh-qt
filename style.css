@@ -13,10 +13,14 @@
 }
 
 body {
-    height: 95vh;
-    margin: 0;
     display: flex;
     flex-direction: column;
+}
+
+#footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
@@ -25,6 +29,8 @@ footer {
     text-align: center;
     font-size: 15pt;
     margin-top: auto;
+    position: fixed;
+    bottom: 30px;
 }
 
 .container {
@@ -64,7 +70,7 @@ footer {
     font-weight: normal;
 }
 
-#button {
+.button {
     font-family: Roboto;
     font-weight: bold;
     font-size: 18px;
@@ -91,4 +97,49 @@ footer {
     -webkit-tap-highlight-color: transparent;
     vertical-align: middle;
     margin: 3pt;
+}
+
+#snackbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }

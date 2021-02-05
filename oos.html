@@ -9,6 +9,9 @@
     function sendQT() {
         document.qt.action = 'https://' + document.getElementById('qturl').value + '/mesh'
         document.getElementById("qt").submit();
+        const snackbar = document.getElementById("snackbar");
+        snackbar.className = "show";
+        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1500);
     }
 </script>
 <body>
@@ -45,12 +48,17 @@
             <label>QT URL</label>
             <input type="text" name="qturl" id="qturl" value="bd5250a0e333.ngrok.io">
         </div>
+        <div id="snackbar-container">
+            <div id="snackbar">QTs succesfully sent!</div>
+        </div>
         </div>
     <div class="buttons-container">
-        <button id="button" onclick="sendQT()">LAUNCH QT</button>
+        <button class="button" onclick="sendQT()">LAUNCH QT</button>
     </div>
     <iframe id="ifrm1" name="ifrm1" style="display:none"></iframe>
 </div>
+<div id="footer-container">
+    <footer>Made by zeceajnv</footer>
+</div>
 </body>
-<footer>Made with love by zeceajnv</footer>
 </html>
