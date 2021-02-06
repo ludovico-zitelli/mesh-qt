@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeceajnv snipes de helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function atc() {
+        document.form.action = 'https://www.snipes.com/on/demandware.store/Sites-snse-DE-AT-Site/de_DE/Cart-AddProduct?format=ajax'
+        document.getElementById("form").submit();
+    }
+
+    function atw() {
+        document.form.action = 'https://www.snipes.com/on/demandware.store/Sites-snse-DE-AT-Site/de_DE/Wishlist-AddProduct?format=ajax'
+        document.getElementById("form").submit();
+    }
+</script>
+<body>
+<div class="container">
+    <div class="text-container">
+        <h1 id="title">SNIPES DE atc/atw</h1>
+        <h2 id="descr">Insert the pid to atc/atw</h2>
+        <form id="form" name="form" action="" method="POST" target="_blank">
+            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="options" value="[]">
+            <input type="text" name="pid" id="pid" placeholder="00013801900001">
+        </form>
+    </div>
+    <div class="buttons-container">
+        <button class="button" onclick="atc()">ATC</button>
+        <button class="button" onclick="atw()">ATW</button>
+    </div>
+    <a class="button" href="snipes-it.html">SNIPES IT</a>
+</div>
+<div id="footer-container">
+    <footer>Made by zeceajnv</footer>
+</div>
+</body>
+</html>
