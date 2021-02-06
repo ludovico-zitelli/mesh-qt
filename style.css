@@ -1,18 +1,5 @@
-@font-face {
-    font-family: "Roboto";
-    src: url("./assets/fonts/roboto_regular/Roboto-Regular-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Roboto";
-    src: url("./assets/fonts/roboto_bold/Roboto-Bold-webfont.woff") format("woff");
-    font-weight: bold;
-    font-style: bold;
-}
-
 body {
+    font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -24,7 +11,6 @@ body {
 }
 
 footer {
-    font-family: Roboto;
     font-weight: normal;
     text-align: center;
     font-size: 15pt;
@@ -39,10 +25,6 @@ footer {
     align-items: center;
     text-align: center;
     margin-top: 50pt;
-}
-
-.text-container {
-    font-family: Roboto;
 }
 
 .buttons-container {
@@ -71,7 +53,6 @@ footer {
 }
 
 .button {
-    font-family: Roboto;
     font-weight: bold;
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
