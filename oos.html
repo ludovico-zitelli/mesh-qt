@@ -21,7 +21,7 @@
         <h2 id="descr">Select locale and insert pid</h2>
         <form id="qt" name="qt" action="" method="GET" target="ifrm1">
             <div style="display: flex; flex-direction: column; justify-content: space-around; margin-bottom: 20px">
-                <label>STOREID</label>
+                <label for="store">STOREID</label>
                 <select name="store" id="store">
                     <option value="footpatrol">Footpatrol</option>
                     <option value="size">Size</option>
@@ -36,7 +36,7 @@
                 </select>
             </div>
             <div style="display: flex; flex-direction: column; justify-content: space-around; margin-bottom: 20px;">
-                <label>PID</label>
+                <label for="pid">PID</label>
                 <input type="text" name="pid" id="pid" placeholder="398046_footpatrolcom">
             </div>
         </form>
@@ -45,7 +45,7 @@
             <input type="number" name="amount" id="amount" value="1">
         </div>-->
         <div style="display: flex; flex-direction: column;">
-            <label>QT URL</label>
+            <label for="qturl">QT URL</label>
             <input type="text" name="qturl" id="qturl" placeholder="bd5250a0e333.ngrok.io">
         </div>
         <div id="snackbar-container">

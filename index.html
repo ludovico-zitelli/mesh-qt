@@ -2,83 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zeceajnv mesh qt</title>
+    <title>zeceajnv tools</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
-        var url = new URL(window.location.href);
-        var pid = url.searchParams.get("pid");
-        var region = url.searchParams.get('region')
-        var mode = url.searchParams.get('mode')
-
-        function showPid() {
-            document.getElementById("pid").innerHTML = pid;
-        }
-
-        function hawkQT() {
-            if(mode === "fe"){
-                redirect = `https://hawkmesh.com/quicktask/${region}-front/${pid}`
-            } else {
-                redirect = `https://hawkmesh.com/quicktask/${region}/${pid}`
-            }
-            location.href = redirect;
-        }
-
-        function rootalabzQT(){
-            redirect = `http://127.0.0.1:1666/quicktask?store=${region}&pid=${pid}`
-            location.href = redirect
-        }
-
-        function mbotQT(){
-            redirect = `https://mbot.app/${region}/variant/${pid}`
-            location.href = redirect;
-        }
-
-        function polarQT(){
-            if(region === "footpatrolgb"){
-                region = "footpatrol"
-                if(mode === "fe"){
-                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
-                } else {
-                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
-                }
-            }
-            if(region === "sizefr"){
-                region = "size"
-                if(mode === "fe"){
-                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
-                } else {
-                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
-                }
-            }
-            if(region === "sizede"){
-                region = "size"
-                if(mode === "fe"){
-                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
-                } else {
-                    redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
-                }
-            }
-            if(mode === "fe"){
-                redirect = `https://qt.polarcop.com/${region}?pid=${pid}&mode=Frontend`
-            } else {
-                redirect = `https://qt.polarcop.com/${region}?pid=${pid}`
-            }
-            location.href = redirect;
-        }
-    </script>
-<body onload="showPid()">
+<body>
     <div class="container">
         <div class="text-container">
-            <h1 id="title">MESH QTs</h1>
-            <h2 id="descr">Please select your bot for redirect</h2>
-            <h2 id="pid"></h2>
+            <h1 id="title">ZECEA TOOLS</h1>
+            <h2 id="descr">Please select which tool u need</h2>
         </div>
         <div class="buttons-container">
-            <button class="button" onclick="hawkQT()">HAWK</button>
-            <button class="button" onclick="rootalabzQT()">ROOTLABZ</button>
-            <button class="button" onclick="mbotQT()">MBOT</button>
-            <button class="button" onclick="polarQT()">POLAR</button>
+            <a class="button" href="https://zeceainc.com/mesh-qt">MESH QT</a>
+            <a class="button" href="https://zeceainc.com/oos">OOS QT HELPER</a>
+        </div>
+        <div>
+            <a class="button" href="https://zeceainc.com/sbx">SOLEBOX HELPER</a>
+            <a class="button" href="https://zeceainc.com/snipes-it">SNIPES IT HELPER</a>
+            <a class="button" href="https://zeceainc.com/snipes-de">SNIPES DE HELPER</a>
         </div>
     </div>
     <div id="footer-container">
