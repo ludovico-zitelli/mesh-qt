@@ -4,6 +4,10 @@ body {
     flex-direction: column;
 }
 
+h1, h2, h3 {
+    font-family: Roboto, sans-serif;
+}
+
 #footer-container {
     display: flex;
     flex-direction: column;
