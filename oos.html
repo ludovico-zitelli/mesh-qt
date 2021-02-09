@@ -25,15 +25,27 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <script>
+    const params = new URLSearchParams(window.location.search)
+
+    function queryPid() {
+        if(params.has('pid')) {
+            document.getElementById('pid').value = params.get('pid');
+        } if(params.has('locale')) {
+            document.getElementById('store').value = params.get('locale');
+        } if(params.has('qturl')) {
+            document.getElementById('qturl').value = params.get('qturl');
+        }
+    }
+
     function sendQT() {
         document.qt.action = 'https://' + document.getElementById('qturl').value + '/mesh'
-        document.getElementById("qt").submit();
-        const snackbar = document.getElementById("snackbar");
-        snackbar.className = "show";
-        setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1500);
+        document.getElementById('qt').submit();
+        const snackbar = document.getElementById('snackbar');
+        snackbar.className = 'show';
+        setTimeout(function(){ snackbar.className = snackbar.className.replace('show', ''); }, 1500);
     }
 </script>
-<body>
+<body onload="queryPid()">
 <div class="container">
     <div>
         <h1 id="title">OOS QT</h1>
@@ -42,11 +54,11 @@
             <div style="display: flex; flex-direction: column; justify-content: space-around; margin-bottom: 20px">
                 <label for="store">STOREID</label>
                 <select name="store" id="store">
-                    <option value="footpatrol">Footpatrol</option>
-                    <option value="size">Size</option>
+                    <option value="footpatroluk">Footpatrol</option>
+                    <option value="sizeuk">Size</option>
                     <option value="sizefr">Size FR</option>
                     <option value="sizede">Size DE</option>
-                    <option value="jdsports">JDSports UK</option>
+                    <option value="jdsportsuk">JDSports</option>
                     <option value="jdsportsde">JDSports DE</option>
                     <option value="jdsportsfr">JDSports FR</option>
                     <option value="jdsportsit">JDSports IT</option>
