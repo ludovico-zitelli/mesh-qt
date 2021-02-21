@@ -40,7 +40,11 @@
     }
 
     function sendQT() {
-        document.qt.action = 'http://' + document.getElementById('qturl').value + '/mesh'
+        if(document.getElementById('qturl').value.startsWith('localhost')) {
+            document.qt.action = 'http://' + document.getElementById('qturl').value + '/mesh'
+        } else {
+            document.qt.action = 'https://' + document.getElementById('qturl').value + '/mesh'
+        }
         document.getElementById('qt').submit();
         const snackbar = document.getElementById('snackbar');
         snackbar.className = 'show';
