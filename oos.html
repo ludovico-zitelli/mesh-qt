@@ -34,6 +34,8 @@
             document.getElementById('store').value = params.get('locale');
         } if(params.has('qturl')) {
             document.getElementById('qturl').value = params.get('qturl');
+        } if(params.has('amount')) {
+            document.getElementById('amount').value = params.get('amount');
         }
     }
 
@@ -52,7 +54,7 @@
         <h2 id="descr">Select locale and insert pid</h2>
         <form id="qt" name="qt" action="" method="GET" target="ifrm1">
             <div style="display: flex; flex-direction: column; justify-content: space-around; margin-bottom: 20px">
-                <label for="store">STOREID</label>
+                <label for="store">STORE</label>
                 <select name="store" id="store">
                     <option value="footpatroluk">Footpatrol</option>
                     <option value="sizeuk">Size</option>
@@ -67,14 +69,14 @@
                 </select>
             </div>
             <div style="display: flex; flex-direction: column; justify-content: space-around; margin-bottom: 20px;">
-                <label for="pid">PID</label>
+                <label for="pid">PID or SKU</label>
                 <input type="text" name="pid" id="pid" placeholder="398046_footpatrolcom">
             </div>
+            <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                <label for="amount">AMOUNT</label>
+                <input type="number" name="amount" id="amount" value="1">
+            </div>
         </form>
-        <!--<div style="display: flex; flex-direction: column; margin-bottom: 20px;">
-            <label>AMOUNT</label>
-            <input type="number" name="amount" id="amount" value="1">
-        </div>-->
         <div style="display: flex; flex-direction: column;">
             <label for="qturl">QT URL</label>
             <input type="text" name="qturl" id="qturl" placeholder="bd5250a0e333.ngrok.io">
