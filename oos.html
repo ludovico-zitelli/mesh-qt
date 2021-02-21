@@ -40,7 +40,7 @@
     }
 
     function sendQT() {
-        document.qt.action = 'https://' + document.getElementById('qturl').value + '/mesh'
+        document.qt.action = 'http://' + document.getElementById('qturl').value + '/mesh'
         document.getElementById('qt').submit();
         const snackbar = document.getElementById('snackbar');
         snackbar.className = 'show';
