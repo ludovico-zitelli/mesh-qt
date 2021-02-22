@@ -30,12 +30,12 @@
     function queryPid() {
         if(params.has('pid')) {
             document.getElementById('pid').value = params.get('pid');
-        } if(params.has('locale')) {
-            document.getElementById('store').value = params.get('locale');
-        } if(params.has('qturl')) {
-            document.getElementById('qturl').value = params.get('qturl');
+        } if(params.has('store')) {
+            document.getElementById('store').value = params.get('store');
         } if(params.has('amount')) {
             document.getElementById('amount').value = params.get('amount');
+        } if(params.has('qturl')) {
+            document.getElementById('qturl').value = params.get('qturl');
         }
     }
 
