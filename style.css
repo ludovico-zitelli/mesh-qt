@@ -56,6 +56,10 @@ footer {
     font-weight: normal;
 }
 
+#notes {
+    font-size: 14pt;
+}
+
 .button {
     font-weight: bold;
     font-size: 18px;
